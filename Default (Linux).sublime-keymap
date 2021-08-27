@@ -1,0 +1,42 @@
+[
+	{
+		"keys": ["f1"],
+		"command": "repl_open",
+		"caption": "Python - IDE",
+		"id": "repl_python_run",
+		"mnemonic": "R",
+		"args": {
+			"type": "subprocess",
+			"encoding": "utf8",
+			"cmd": ["python","-i"],
+			"cwd": "$file_path",
+			"syntax": "Packages/Python/Python.tmLanguage",
+			"external_id": "python",
+			"extend_env": {"PYTHONIOENCODING": "utf-8"}
+			},
+	},
+	 
+
+	{
+
+		"keys":["f7"],
+
+		"caption":"SublimeREPL: save & Python - RUN current line & move down",
+
+		"command":"chain",
+
+		"args":	{
+
+			"commands":[
+
+				["save"],
+
+				["repl_transfer_current", {"scope": "lines"}],
+				[ "move", {"by": "lines", "forward": true}] 
+
+			]
+
+		}
+
+	}
+]
