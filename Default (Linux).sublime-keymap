@@ -18,25 +18,20 @@
 	 
 
 	{
-
 		"keys":["f7"],
-
 		"caption":"SublimeREPL: save & Python - RUN current line & move down",
-
 		"command":"chain",
-
 		"args":	{
-
 			"commands":[
-
 				["save"],
-
 				["repl_transfer_current", {"scope": "lines"}],
 				[ "move", {"by": "lines", "forward": true}] 
-
 			]
 
 		}
 
-	}
+	},
+
+	{ "keys": ["shift+space"], "command": "cancel_build" },
+	 
 ]
